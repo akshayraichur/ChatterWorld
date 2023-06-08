@@ -1,3 +1,3 @@
 ## ChatterWorld
 
-A social media app built with React, Styled Components & Firebase
+A social Media App built with Nextjs, Styled components, Firebase
