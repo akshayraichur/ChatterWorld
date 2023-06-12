@@ -1,4 +1,23 @@
+import styled from "@emotion/styled";
 import Head from "next/head";
+
+const Button = styled.button`
+  background-color: ${(props) => props.theme.colors.primary};
+  color: white;
+  padding: 0.8rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 0.5rem 0.2rem 0.5rem 0;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  font-family: inherit;
+  transition: all 0.3s ease;
+
+  &:active {
+    transform: scale(0.9);
+  }
+`;
 
 export default function Home() {
   return (
@@ -17,7 +36,7 @@ export default function Home() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sed dicta, ratione soluta qui similique
             debitis, ut sunt voluptate nulla cum aperiam, neque corrupti dolor quod incidunt assumenda aliquam dolore?
           </p>
-          <button className="btn">Click here</button>
+          <Button className="btn">Click here</Button>
           <button className="btn secondary">Click here</button>
           <button className="btn danger">Click here</button>
           <button className="btn success">Click here</button>

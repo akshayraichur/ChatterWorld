@@ -59,3 +59,18 @@ export const globalStyles = css`
     background-color: ${colors.secondary};
   }
 `;
+
+export const theme = {
+  colors: {
+    foreground: "#fff",
+    background: "#f3f4f6",
+    primary: "#6366f1",
+    secondary: "#fb923c",
+    success: "#22c55e",
+    danger: "#f43f5e",
+  },
+  shadow: {
+    sm: `box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05)`,
+    md: `box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)`,
+  },
+};
