@@ -4,6 +4,8 @@ import styled from "@emotion/styled";
 type InputProps = {
   placeholder: string;
   type: string;
+  value?: string;
+  onChange?: () => void;
 };
 
 const StyledInput = styled.input`
@@ -30,8 +32,8 @@ const StyledInput = styled.input`
 `;
 
 const Input = (props: InputProps) => {
-  const { placeholder, type } = props;
-  return <StyledInput placeholder={placeholder} type={type} />;
+  const { placeholder, type, ...rest } = props;
+  return <StyledInput placeholder={placeholder} type={type} {...rest} />;
 };
 
 export default Input;

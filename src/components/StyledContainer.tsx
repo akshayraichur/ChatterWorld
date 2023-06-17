@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const StyledLogin = styled.div`
+const StyledContainer = styled.div`
   display: flex;
   height: 100vh;
   background-color: ${(props) => props.theme.colors.background};
@@ -31,4 +31,4 @@ const StyledLogin = styled.div`
   }
 `;
 
-export default StyledLogin;
+export default StyledContainer;

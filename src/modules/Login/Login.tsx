@@ -1,14 +1,11 @@
 import { NextPage } from "next";
-import StyledLogin from "./Login.styles";
 import Heading from "@/components/Heading";
 import Head from "next/head";
-import Input from "@/components/Input";
-import Button from "@/components/Button";
-import styled from "@emotion/styled";
+import Input from "@/UI/Input";
+import Button from "@/UI/Button";
 
-const PaddedContainer = styled.section`
-  padding: 1rem;
-`;
+import StyledContainer from "@/components/StyledContainer";
+import PaddedContainer from "@/components/PaddedContainer";
 
 const Login: NextPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -21,7 +18,7 @@ const Login: NextPage = () => {
           <title>Login | ChatterWorld</title>
         </Head>
       </>
-      <StyledLogin>
+      <StyledContainer>
         <PaddedContainer>
           <div className="container">
             <Heading className="lg center">Welcome back!</Heading>
@@ -56,7 +53,7 @@ const Login: NextPage = () => {
             </div>
           </div>
         </PaddedContainer>
-      </StyledLogin>
+      </StyledContainer>
     </>
   );
 };

@@ -13,8 +13,8 @@ type ButtonProps = {
 };
 
 const Button = (props: ButtonProps) => {
-  const { children } = props;
-  return <button {...props}>{children}</button>;
+  const { children, ...rest } = props;
+  return <button {...rest}>{children}</button>;
 };
 
 const StyledButton = styled(Button)`
