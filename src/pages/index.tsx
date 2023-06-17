@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import Head from "next/head";
-import { inter, notoSans } from "./_app";
+import { inter } from "./_app";
 
 const Button = styled.button`
   background-color: ${(props) => props.theme.colors.primary};
@@ -32,7 +32,7 @@ export default function Home() {
       <div>
         <h1 className={inter.className}>Hello World! Welcome to Chatter World</h1>
         <div className="card bsh">
-          <h2 className={notoSans.className}>Post Text</h2>
+          <h2>Post Text</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sed dicta, ratione soluta qui similique
             debitis, ut sunt voluptate nulla cum aperiam, neque corrupti dolor quod incidunt assumenda aliquam dolore?
