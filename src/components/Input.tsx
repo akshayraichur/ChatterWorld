@@ -7,10 +7,10 @@ type InputProps = {
 };
 
 const StyledInput = styled.input`
-  width: 70%;
+  width: 80%;
   margin: 0.5rem 0;
   padding: 0.8rem;
-  font-family: "Inter";
+  font-family: var(--fira-sans);
   border-radius: ${(props) => props.theme.borderRadius};
   font-size: 1.1rem;
   color: ${(props) => props.theme.colors.primary};

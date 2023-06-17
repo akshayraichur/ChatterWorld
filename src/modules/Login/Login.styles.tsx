@@ -7,17 +7,15 @@ const StyledLogin = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 
   .container {
     background-color: ${(props) => props.theme.colors.foreground};
     padding: 1.2rem;
     border-radius: ${(props) => props.theme.borderRadius};
-    width: 45%;
-    margin: 1rem;
 
     @media screen and (max-width: 899px) {
       width: 100%;
-      margin: 1rem;
     }
   }
 

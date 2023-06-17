@@ -7,6 +7,9 @@ type ButtonProps = {
   variant?: string;
   color?: string;
   width?: string;
+  className?: string;
+  isLoading?: boolean;
+  type?: "button" | "submit" | undefined;
 };
 
 const Button = (props: ButtonProps) => {
@@ -20,12 +23,12 @@ const StyledButton = styled(Button)`
   cursor: pointer;
   color: white;
   font-size: 1rem;
-  font-family: "Inter";
   border-radius: ${(props) => props.theme.borderRadius};
   box-shadow: ${(props) => props.theme.shadow.md};
   background-color: ${(props) => props.theme.colors.primary};
   border: 1px solid ${(props) => props.theme.colors.primary};
   width: 100%;
+  font-family: var(--fira-sans);
 
   ${(props) =>
     props.width &&
@@ -39,6 +42,22 @@ const StyledButton = styled(Button)`
       background-color: ${props.theme.colors.secondary};
       border: 1px solid ${props.theme.colors.secondary};
     `}
+
+    ${(props) =>
+    props.color === "success" &&
+    css`
+      background-color: ${props.theme.colors.success};
+      border: 1px solid ${props.theme.colors.success};
+    `}
+
+
+    @media only screen and (width <= 599px ) {
+    width: 100%;
+  }
 `;
+
+StyledButton.defaultProps = {
+  type: "button",
+};
 
 export default StyledButton;
