@@ -1,5 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
+import Button from "@/components/Button";
 import Heading from "@/components/Heading";
+import { Container, Grid } from "@mui/material";
+
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -11,9 +16,37 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div style={{ margin: "1rem 0 0 0" }}>
-        <Heading className="center xl">Welcome to ChatterWorld 👋</Heading>
+        {/* <Heading className="center xl">Welcome to ChatterWorld 👋</Heading> */}
+        <Heading xl="true" center="true">
+          Welcome to ChatterWorld 👋
+        </Heading>
         <p className="center">Connect, Share, and Discover with ChatterWorld</p>
       </div>
+
+      <Container maxWidth="lg" style={{ marginTop: "4rem" }}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
+            <h3>
+              The ultimate social media app designed to revolutionize the way you connect, share, and discover. Whether
+              {"you're"} looking to stay connected with friends, showcase your creativity, or explore exciting content,
+              ChatterWorld has everything you need. Join our vibrant community and experience social networking like
+              never before.
+            </h3>
+            <Button variant="filled" color="green">
+              <Link href="/signup" style={{ textDecoration: "none", color: "white" }}>
+                Join Now!
+              </Link>
+            </Button>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <img
+              src="https://images.unsplash.com/photo-1554177255-61502b352de3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="like-img"
+              style={{ width: "100%" }}
+            />
+          </Grid>
+        </Grid>
+      </Container>
     </>
   );
 }

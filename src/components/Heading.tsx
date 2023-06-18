@@ -1,43 +1,47 @@
-import { css } from "@emotion/react";
-import styled from "@emotion/styled";
 import React from "react";
+import { css, styled } from "styled-components";
 
-type HeadingProp = {
+type HeadingProps = {
+  md?: "true" | "false" | boolean;
+  lg?: "true" | "false" | boolean;
+  xl?: "true" | "false" | boolean;
   children: string;
-  className?: string;
+  center?: "true" | "false" | boolean;
 };
 
-const StyledHeading = styled.h1`
-  font-size: 3rem;
-  font-weight: 900;
-  color: ${(props) => props.theme.colors.primary};
+const StyledHeading = styled.h1<HeadingProps>`
+  font-weight: 700;
+  margin: 0.4rem 0;
 
   ${(props) =>
-    props.className?.includes("lg") &&
+    props.md &&
     css`
-      font-size: 2.6rem;
+      font-size: 3rem;
     `}
+
   ${(props) =>
-    props.className?.includes("xl") &&
+    props.lg &&
     css`
-      font-size: 4rem;
+      font-size: 3.4rem;
     `}
+
     ${(props) =>
-    props.className?.includes("md") &&
+    props.xl &&
     css`
-      font-size: 2rem;
+      font-size: 3.8rem;
+      font-weight: 900;
     `}
+
     ${(props) =>
-    props.className?.includes("center") &&
+    props.center &&
     css`
       text-align: center;
-    `};
+    `}
 `;
 
-const Heading = (props: HeadingProp) => {
-  const { children } = props;
-
-  return <StyledHeading {...props}>{children}</StyledHeading>;
+const Heading = (props: HeadingProps) => {
+  const { children, ...rest } = props;
+  return <StyledHeading {...rest}>{children}</StyledHeading>;
 };
 
 export default Heading;
