@@ -34,8 +34,8 @@ const StyledButton = styled.button<ButtonProps>`
   ${(props) =>
     props.small === "true" &&
     css`
-      padding: 0.4rem 0.8rem;
-      font-size: 1.2rem;
+      padding: 0.4rem 2rem;
+      font-size: 1rem;
     `}
 
   ${ButtonTransitionStyles}
