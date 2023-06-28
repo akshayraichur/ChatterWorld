@@ -16,7 +16,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div style={{ margin: "1rem 0 0 0" }}>
-        {/* <Heading className="center xl">Welcome to ChatterWorld 👋</Heading> */}
         <Heading xl="true" center="true">
           Welcome to ChatterWorld 👋
         </Heading>

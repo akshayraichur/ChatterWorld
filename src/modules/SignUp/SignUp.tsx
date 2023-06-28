@@ -153,7 +153,7 @@ const Signup: NextPage = () => {
                     type="checkbox"
                     value={showPassword}
                     id="show-p"
-                    onClick={(e) => setShowPassword(e.target.checked ? "true" : "false")}
+                    onClick={(e: any) => setShowPassword(e.target.checked ? "true" : "false")}
                   />
                   <label htmlFor="show-p">Show Password</label>
                 </div>
