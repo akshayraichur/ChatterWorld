@@ -11,6 +11,7 @@ import ProfileIcon from "@/assets/ProfileIcon";
 import Button from "@/components/Button";
 import CreatePost from "@/components/CreatePost";
 import PostCard from "@/components/PostCard";
+import WhoToFollow from "@/components/WhoToFollow";
 
 const Home: NextPage = () => {
   return (
@@ -78,6 +79,7 @@ const Home: NextPage = () => {
             <div>
               <input placeholder="Search.." className="search-input" />
             </div>
+            <WhoToFollow />
           </div>
         </div>
 
