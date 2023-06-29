@@ -2,16 +2,8 @@ import { NextPage } from "next";
 import Head from "next/head";
 import React from "react";
 
-import StyledHome from "./Home.styled";
-import HomeIcon from "@/assets/HomeIcon";
-import SearchIcon from "@/assets/SearchIcon";
-import ExploreIcon from "@/assets/ExploreIcon";
-import BookmarkIcon from "@/assets/BookmarkIcon";
-import ProfileIcon from "@/assets/ProfileIcon";
-import Button from "@/components/Button";
 import CreatePost from "@/components/CreatePost";
 import PostCard from "@/components/PostCard";
-import WhoToFollow from "@/components/WhoToFollow";
 import Layout from "@/components/Layout";
 
 const Home: NextPage = () => {
