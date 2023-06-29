@@ -10,6 +10,7 @@ import BookmarkIcon from "@/assets/BookmarkIcon";
 import ProfileIcon from "@/assets/ProfileIcon";
 import Button from "@/components/Button";
 import CreatePost from "@/components/CreatePost";
+import PostCard from "@/components/PostCard";
 
 const Home: NextPage = () => {
   return (
@@ -61,11 +62,21 @@ const Home: NextPage = () => {
             </div>
             <div style={{ padding: "1rem 2rem" }}>
               <CreatePost />
+              <PostCard />
+              <PostCard />
+              <PostCard />
+              <PostCard />
+              <PostCard />
+              <PostCard />
+              <PostCard />
+              <PostCard />
+              <PostCard />
+              <PostCard />
             </div>
           </div>
           <div className="suggestions-section">
             <div>
-              <input placeholder="search" />
+              <input placeholder="Search.." className="search-input" />
             </div>
           </div>
         </div>

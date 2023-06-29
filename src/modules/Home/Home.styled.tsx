@@ -10,14 +10,14 @@ const StyledHome = styled.section`
   .home-container {
     width: 100%;
     display: flex;
+    flex: 1;
   }
 
   .options-section {
     border-right: 2px solid #e0e7ff;
-    flex-grow: 1;
     padding: 1rem;
-
     min-height: 100vh;
+    flex: 3;
 
     @media only screen and (max-width: 900px) {
       min-width: 190px;
@@ -29,10 +29,9 @@ const StyledHome = styled.section`
   }
 
   .feed-section {
-    flex-grow: 8;
     overflow: scroll;
     margin-bottom: calc(25px + 1rem);
-    /* padding: 1rem 2rem; */
+    flex: 8;
 
     @media only screen and (max-width: 799px) {
       padding: 1rem;
@@ -41,7 +40,7 @@ const StyledHome = styled.section`
 
   .suggestions-section {
     border-left: 2px solid #e0e7ff;
-    flex-grow: 2;
+    flex: 3;
     padding: 1rem;
 
     @media only screen and (max-width: 900px) {
@@ -94,6 +93,17 @@ const StyledHome = styled.section`
   .icon {
     height: 25px;
     width: 25px;
+  }
+
+  .search-input {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: inherit;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #e0e7ff;
   }
 `;
 
