@@ -13,7 +13,7 @@ const StyledLoading = styled.div<LoadingProps>`
 
   #loader-1 path,
   #loader-1 rect {
-    fill: ${(props) => (props.variant === "outlined" ? props.theme.colors.text : "white")};
+    fill: ${(props) => (props.variant === "outlined" ? props.theme.colors.primary : "white")};
   }
 `;
 
