@@ -11,6 +11,12 @@ const StyledProfileBrief = styled.div`
   justify-content: space-between;
   margin: 0.5rem 0;
 
+  .profile-content {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
   .follow {
     display: flex;
     align-items: center;
@@ -24,8 +30,10 @@ const StyledProfileBrief = styled.div`
 const ProfiileBrief = () => {
   return (
     <StyledProfileBrief>
-      <Avatar sx={{ width: 24, height: 24 }} />
-      <p>Akshay Raichur</p>
+      <div className="profile-content">
+        <Avatar sx={{ width: 24, height: 24 }} />
+        <p>Akshay Raichur</p>
+      </div>
       <p className="follow">
         <PlusIcon /> Follow
       </p>
