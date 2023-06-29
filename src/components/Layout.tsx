@@ -8,9 +8,14 @@ import BookmarkIcon from "@/assets/BookmarkIcon";
 import ProfileIcon from "@/assets/ProfileIcon";
 import Button from "@/components/Button";
 import WhoToFollow from "@/components/WhoToFollow";
+import Link from "next/link";
 
 const StyledLayout = styled.div`
   padding: 0 1rem;
+
+  .header-container {
+    padding: 1rem;
+  }
 
   .home-container {
     width: 100%;
@@ -84,6 +89,8 @@ const StyledLayout = styled.div`
     transition: all 0.2s ease-in;
     padding: 0.5rem 1rem;
     border-radius: 10px;
+    color: inherit;
+    text-decoration: none;
 
     &:hover {
       background-color: #e0e7ff;
@@ -121,36 +128,36 @@ const Layout = (props: LayoutProps) => {
     <StyledLayout>
       <div className="home-container">
         <div className="options-section">
-          <div className="icon-content-container">
+          <Link href="/home" className="icon-content-container">
             <div className="icon">
               <HomeIcon />
             </div>
             <p>Home</p>
-          </div>
-          <div className="icon-content-container">
+          </Link>
+          <Link href="/search" className="icon-content-container">
             <div className="icon">
               <SearchIcon />
             </div>
             <p>Search</p>
-          </div>
-          <div className="icon-content-container">
+          </Link>
+          <Link href="/explore" className="icon-content-container">
             <div className="icon">
               <ExploreIcon />
             </div>
             <p>Explore</p>
-          </div>
-          <div className="icon-content-container">
+          </Link>
+          <Link href="/bookmarks" className="icon-content-container">
             <div className="icon">
               <BookmarkIcon />
             </div>
             <p>Bookmark</p>
-          </div>
-          <div className="icon-content-container">
+          </Link>
+          <Link href="/profile" className="icon-content-container">
             <div className="icon">
               <ProfileIcon />
             </div>
             <p>Profile</p>
-          </div>
+          </Link>
           <div>
             <Button>Create Post</Button>
           </div>

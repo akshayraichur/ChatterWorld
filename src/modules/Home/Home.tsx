@@ -5,6 +5,7 @@ import React from "react";
 import CreatePost from "@/components/CreatePost";
 import PostCard from "@/components/PostCard";
 import Layout from "@/components/Layout";
+import Topbar from "@/components/Topbar";
 
 const Home: NextPage = () => {
   return (
@@ -14,9 +15,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Layout>
-        <div style={{ height: "7vh", borderBottom: "2px solid #e0e7ff", padding: "1rem" }}>
-          <h1>ChatterWorld | Home</h1>
-        </div>
+        <Topbar title="ChatterWorld | Home" />
         <div style={{ padding: "1rem 2rem" }}>
           <CreatePost />
           <PostCard />

@@ -1,6 +1,7 @@
 import Button from "@/components/Button";
 import Layout from "@/components/Layout";
 import PostCard from "@/components/PostCard";
+import Topbar from "@/components/Topbar";
 import { Avatar } from "@mui/material";
 import { NextPage } from "next";
 import Head from "next/head";
@@ -44,6 +45,7 @@ const Profile: NextPage = () => {
       </Head>
       <>
         <Layout>
+          <Topbar title="ChatterWorld | Profile" />
           <StyledProfile>
             <div className="profile-info">
               <div className="profile-container">
